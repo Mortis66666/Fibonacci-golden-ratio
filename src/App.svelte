@@ -1,4 +1,15 @@
 <script lang="ts">
+    const colors = [
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"blue",
+			"indigo",
+			"purple"
+		];
+    const len = colors.length;
+
 	let fib: number[] = [];
 	let spam = false;
 	let delay = 100;
@@ -20,15 +31,7 @@
 	}
 
 	function determine_color(i: number): String {
-		return [
-			"red",
-			"orange",
-			"yellow",
-			"green",
-			"blue",
-			"indigo",
-			"purple"
-		][i%7]
+		return colors[i%len];
 	}
 
 	function start_spam() {
